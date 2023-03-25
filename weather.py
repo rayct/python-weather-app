@@ -29,7 +29,7 @@ button.pack()
 button.place(x=350, y=39)
 
 # Logo
-Logo_image=PhotoImage(file="logo.png")
+Logo_image=PhotoImage(file="assets/logo.png")
 logo=Label(image=Logo_image)
 logo.place(x=150, y=100)
 
