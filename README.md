@@ -6,8 +6,10 @@
 3. pip install timezonefinder
 
 
-## A weather app using python. It is a completely gui tkinter project. 
-## I will use the Open Weather Map API to get the data. 
+## A weather app using python. A gui tkinter project.
+
+## Using the Open Weather Map API to retrieve the data. 
+## My Own Improved Implementation of the Python Weather App.
 
 ## Inspiration taken from the #pythonprojects:
 ## https://www.youtube.com/hashtag/pythonprojects
