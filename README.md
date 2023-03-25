@@ -14,4 +14,4 @@
 ## Inspiration taken from the #pythonprojects:
 ## https://www.youtube.com/hashtag/pythonprojects
 
-## rayturner.dev
+## Re-Designed and Coded by: rayturner.dev
