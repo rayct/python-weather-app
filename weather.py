@@ -34,8 +34,25 @@ logo=Label(image=Logo_image)
 logo.place(x=150, y=100)
 
 
-# Bottom Box
+# Bottom Description Box
+box = tk.Canvas(root, width=1000, height=70, bg="#315887")
+box.pack(side="bottom", fill="x")
 
+# Labels are set inside the description box
+label1 = tk.Label(box, text="Wind", font=("Poppins",15,'bold'),fg="white", bg="#315887", padx=10, pady=10)
+label1.place(relx=0.1, rely=0.5, anchor="w")
+
+label2 = tk.Label(box, text="Air Quality", font=("Poppins",15,'bold'),fg="white", bg="#315887",padx=10, pady=10)
+label2.place(relx=0.3, rely=0.5, anchor="w")
+
+label3 = tk.Label(box, text="Description", font=("Poppins",15,'bold'),fg="white", bg="#315887",padx=10, pady=10)
+label3.place(relx=0.5, rely=0.5, anchor="w")
+
+label4 = tk.Label(box, text="Air Pressure", font=("Poppins",15,'bold'),fg="white", bg="#315887",padx=10, pady=10)
+label4.place(relx=0.7, rely=0.5, anchor="w")
+
+label5 = tk.Label(box, text="Rain", font=("Poppins",15,'bold'),fg="white", bg="#315887",padx=10, pady=10)
+label5.place(relx=0.9, rely=0.5, anchor="w")
 
 
 root.mainloop()
