@@ -1,5 +1,8 @@
 from tkinter import *
 import tkinter as tk
+# from PIL import Image, ImageTk
+from PIL import Image,ImageTk
+from tkinter import Tk, Label
 from geopy.geocoders import Nominatim
 from tkinter import ttk,messagebox
 from timezonefinder import TimezoneFinder
@@ -29,9 +32,24 @@ button.pack()
 button.place(x=350, y=39)
 
 # Logo
-Logo_image=PhotoImage(file="assets/logo.png")
-logo=Label(image=Logo_image)
-logo.place(x=150, y=100)
+# Original Image Size: 429x368
+
+# load the image
+image = Image.open("assets/logo.png")
+resized_image= image.resize((329,268), Image.ANTIALIAS)
+
+# convert the resized image to a Tkinter-compatible format
+# Note that when using the ImageTk.PhotoImage method,
+# the image must be kept as a reference to avoid being garbage collected by Python.
+# This means that you need to keep a reference to the tk_image variable in your program,
+# for example by assigning it to an attribute of a class or by using a global variable.
+tk_image = ImageTk.PhotoImage(resized_image)
+
+# create a label with the image
+label = tk.Label(root, image=tk_image)
+# Position the Image on canvas
+label.place(x=100, y=100)
+label.pack()
 
 
 # Bottom Description Box
@@ -56,3 +74,10 @@ label5.place(relx=0.9, rely=0.5, anchor="w")
 
 
 root.mainloop()
+
+
+# Code Snippets
+# Set Window Icon in Tkinter
+# tk.call('wm', 'Iconphoto', ) - Method to Set Window Icon
+# root.iconbitmap - to Set Window Icon
+# root.iconphoto - to Set Window Icon
