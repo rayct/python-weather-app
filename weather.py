@@ -12,4 +12,23 @@ root.title("Weather App")
 root.geometry("1000x600+300+200")
 root.resizable(False,False)
 
+# Search Box
+# Search_image=PhotoImage(file="")
+def search():
+    # code to perform search goes here
+    search_term = entry.get()
+    print(f"Searching for: {search_term}")
+
+# root = tk.Tk()
+
+entry = tk.Entry(root, justify="center", width=30)
+entry.pack()
+entry.place(x=60, y=40)
+
+button = tk.Button(root, justify="center", text="Search", command=search)
+button.pack()
+button.place(x=350, y=39)
+
+
+
 root.mainloop()
